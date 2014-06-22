@@ -5,10 +5,10 @@
 [![Code Climate](https://codeclimate.com/github/aklaiber/rgcm.png)][codeclimate]
 [![Dependencies Status](http://img.shields.io/gemnasium/aklaiber/rgcm.svg)][gemnasium]
 
-[travis]: https://travis-ci.org/aklaiber/activepayment
-[gem]: https://rubygems.org/gems/activepayment
-[codeclimate]: https://codeclimate.com/github/aklaiber/activepayment
-[gemnasium]: https://gemnasium.com/aklaiber/activepayment
+[travis]: https://travis-ci.org/aklaiber/rgcm
+[gem]: https://rubygems.org/gems/rgcm
+[codeclimate]: https://codeclimate.com/github/aklaiber/rgcm
+[gemnasium]: https://gemnasium.com/aklaiber/rgcm
 
 
 Ruby mapper for [Google Cloud Messaging](http://developer.android.com/guide/google/gcm/index.html)
