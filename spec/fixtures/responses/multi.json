@@ -1,0 +1,25 @@
+{
+    "multicast_id":5958304298192430760,
+    "success":3,
+    "failure":11,
+    "canonical_ids":1,
+    "results":[
+        { "message_id":"0:1403426982650227%62dfd0f6e116c072"},
+        { "error":"NotRegistered"},
+        { "error":"NotRegistered"},
+        { "error":"NotRegistered"},
+        { "error":"NotRegistered"},
+        { "error":"NotRegistered"},
+        { "error":"NotRegistered"},
+        { "error":"NotRegistered"},
+        { "error":"NotRegistered"},
+        {
+            "message_id":"0:1403426982651391%b930435be116c072",
+            "registration_id":"APA91bFgaPSr9eX0VKsgFT15bg8umQBftGGOVEsKjBm9KtLfU5pz1ytEZkCm7YKjXbpavurXSqMdh1Sviry4ZoXZIZmzLTDI2ti6mxFjuY4tNom5uO8VcvH2EjPu2mwFuZyfQomJpRmVsraCJWpyOzms5WMgrYIdQXb08UvOKKe72ByOcClxlAo"
+        },
+        { "error":"NotRegistered"},
+        { "error":"NotRegistered"},
+        { "error":"NotRegistered"},
+        { "message_id":"0:1403426982652703%b930435be116c072"}
+    ]
+}
