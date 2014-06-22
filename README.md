@@ -1,6 +1,17 @@
 # Rgcm
 
-TODO: Write a gem description
+[![Build Status](https://api.travis-ci.org/aklaiber/rgcm.svg)][travis]
+[![Gem Version](http://img.shields.io/gem/v/rgcm.svg)][gem]
+[![Code Climate](https://codeclimate.com/github/aklaiber/rgcm.png)][codeclimate]
+[![Dependencies Status](http://img.shields.io/gemnasium/aklaiber/rgcm.svg)][gemnasium]
+
+[travis]: https://travis-ci.org/aklaiber/activepayment
+[gem]: https://rubygems.org/gems/activepayment
+[codeclimate]: https://codeclimate.com/github/aklaiber/activepayment
+[gemnasium]: https://gemnasium.com/aklaiber/activepayment
+
+
+Ruby mapper for [Google Cloud Messaging](http://developer.android.com/guide/google/gcm/index.html)
 
 ## Installation
 
