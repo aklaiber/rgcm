@@ -60,6 +60,31 @@ Rgcm::Message.new.post('_GCM_REGESTRATION_ID_', collapse_key, data) # => Rgcm::R
 Rgcm::Message.new.post(['_GCM_REGESTRATION_ID_1_', '_GCM_REGESTRATION_ID_2_'], collapse_key, data) # => Rgcm::Response
 ```
 
+Rgcm::Response methods:
+
+```json
+{
+    "multicast_id":5030383832068975557,
+    "success":1,
+    "failure":0,
+    "canonical_ids":0,
+    "results":[
+        { "message_id":"0:1403425286258916%62dfd0f6e116c072" }
+    ]
+}
+```
+
+``` ruby
+response = Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', collapse_key, data)
+
+response.count_successes # => 1
+response.count_failures # => 0
+response.has_successes? # => true
+response.has_failures? # => false
+response.results # => '{ "message_id":"0:1403425286258916%62dfd0f6e116c072" }' 
+response.successes # => '{ "message_id":"0:1403425286258916%62dfd0f6e116c072" }' 
+response.errors # => nil
+```
 
 ## Contributing
 
