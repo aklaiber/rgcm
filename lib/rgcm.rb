@@ -8,6 +8,7 @@ require 'rgcm/response'
 require 'rgcm/request_builder'
 require 'rgcm/message'
 require 'rgcm/version'
+require 'rgcm/railtie' if defined?(Rails)
 
 module Rgcm
 
