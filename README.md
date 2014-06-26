@@ -29,7 +29,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+``` ruby
+collapse_key = '_GCM_COLLAPS_KEY_' 
+data = { foo: 'bar' }
+
+Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', collapse_key, data) # => Rgcm::Response
+
+Rgcm::Message.new('_API_KEY_').post(['_GCM_REGESTRATION_ID_1_', '_GCM_REGESTRATION_ID_2_'], collapse_key, data) # => Rgcm::Response
+```
+
+With rails YML config file:
+
+``` yml
+development:
+  api_key: '_API_KEY_'
+
+test:
+  api_key: '_API_KEY_'
+
+production:
+  api_key: '_API_KEY_'
+```
+
+``` ruby
+collapse_key = '_GCM_COLLAPS_KEY_' 
+data = { foo: 'bar' }
+
+Rgcm::Message.new.post('_GCM_REGESTRATION_ID_', collapse_key, data) # => Rgcm::Response
+
+Rgcm::Message.new.post(['_GCM_REGESTRATION_ID_1_', '_GCM_REGESTRATION_ID_2_'], collapse_key, data) # => Rgcm::Response
+```
+
 
 ## Contributing
 
