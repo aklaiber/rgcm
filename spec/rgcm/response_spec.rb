@@ -6,10 +6,10 @@ describe Rgcm::Response do
   context 'with successfully response' do
     let(:json) { File.open("#{FIXTURES_PATH}/responses/successfully.json").read }
     it '#has_successes?' do
-      expect(response.has_successes?).to be_true
+      expect(response.has_successes?).to be true
     end
     it '#has_failures?' do
-      expect(response.has_failures?).to be_false
+      expect(response.has_failures?).to be false
     end
     it '#count_successes' do
       expect(response.count_successes).to eql(1)
@@ -22,10 +22,10 @@ describe Rgcm::Response do
   context 'with failure response' do
     let(:json) { File.open("#{FIXTURES_PATH}/responses/failure.json").read }
     it '#has_successes?' do
-      expect(response.has_successes?).to be_false
+      expect(response.has_successes?).to be false
     end
     it '#has_failures?' do
-      expect(response.has_failures?).to be_true
+      expect(response.has_failures?).to be true
     end
     it '#count_successes' do
       expect(response.count_successes).to eql(0)
@@ -41,10 +41,10 @@ describe Rgcm::Response do
   context 'with failure response' do
     let(:json) { File.open("#{FIXTURES_PATH}/responses/multi.json").read }
     it '#has_successes?' do
-      expect(response.has_successes?).to be_true
+      expect(response.has_successes?).to be true
     end
     it '#has_failures?' do
-      expect(response.has_failures?).to be_true
+      expect(response.has_failures?).to be true
     end
     it '#count_successes' do
       expect(response.count_successes).to eql(3)
