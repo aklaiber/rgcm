@@ -89,8 +89,9 @@ response.count_failures # => 0
 response.has_successes? # => true
 response.has_failures? # => false
 response.results # => '{ "message_id":"0:1403425286258916%62dfd0f6e116c072" }' 
-response.successes # => '{ "message_id":"0:1403425286258916%62dfd0f6e116c072" }' 
-response.errors # => nil
+response.results_with_successes # => '{ "message_id":"0:1403425286258916%62dfd0f6e116c072" }' 
+response.results_with_errors # => nil
+response.results_with_canonical_ids # => nil
 ```
 
 ## Contributing
