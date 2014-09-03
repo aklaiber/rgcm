@@ -10,10 +10,26 @@ describe Rgcm::Message do
 
   let(:json) { File.open("#{FIXTURES_PATH}/responses/successfully.json").read }
 
-  it 'returns rgcm response' do
-    response = Rgcm::Message.new('TEST_API_KEY').post('test', 'test', data)
+  it 'returns gcm response' do
+    response = Rgcm::Message.new('TEST_API_KEY').post('test', data)
 
     expect(response).to be_kind_of(Rgcm::Response)
+  end
+
+  context 'with collapse_key' do
+    it 'returns gcm response' do
+      response = Rgcm::Message.new('TEST_API_KEY').post('test', data, collapse_key: 'test')
+
+      expect(response).to be_kind_of(Rgcm::Response)
+    end
+  end
+
+  context 'with time_to_live' do
+    it 'returns gcm response' do
+      response = Rgcm::Message.new('TEST_API_KEY').post('test', data, time_to_live: 0)
+
+      expect(response).to be_kind_of(Rgcm::Response)
+    end
   end
 
 end

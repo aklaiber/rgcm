@@ -13,8 +13,8 @@ module Rgcm
       end
     end
 
-    def post(registration_ids, collapse_key, data)
-      request = RequestBuilder.new(api_key, registration_ids,  collapse_key, data).build
+    def post(registration_ids, data, options=nil)
+      request = RequestBuilder.new(api_key, registration_ids, options, data).build
 
       response = request.run
 
