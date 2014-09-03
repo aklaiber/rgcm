@@ -1,0 +1,15 @@
+{
+    "multicast_id":6612807694841069664,
+    "success":2,
+    "failure":0,
+    "canonical_ids":1,
+    "results":[
+        {
+            "message_id":"0:1403425286258916%62dfd0f6e116c072"
+        },
+        {
+            "registration_id" : "APA91bEEXJH2YMRhc3cQ2OF0N4BX4SfSlUjNYKsMhGWiaiqvJ4pSLB9mAvdMwt_UVOtAc7egxkFImkdfNLHJHkT-yRpaBuw4duDhoJa52YdzXw1dR05mb0R_mfdegzpfA5rEi1iSfHInxgaDoin0xlOdmsKoYU7YXw",
+            "message_id" : "0:1409742140784985%62dfd0f6f9fd7ecd"
+        }
+    ]
+}

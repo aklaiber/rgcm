@@ -34,7 +34,7 @@ describe Rgcm::Response do
       expect(response.count_failures).to eql(1)
     end
     it '#errors' do
-      expect(response.errors.size).to eql(1)
+      expect(response.results_with_errors.size).to eql(1)
     end
   end
 
@@ -53,10 +53,24 @@ describe Rgcm::Response do
       expect(response.count_failures).to eql(11)
     end
     it '#errors' do
-      expect(response.errors.size).to eql(11)
+      expect(response.results_with_errors.size).to eql(11)
     end
     it '#successes' do
-      expect(response.successes.size).to eql(3)
+      expect(response.results_with_successes.size).to eql(3)
+    end
+  end
+
+  context 'with canonical_ids' do
+    let(:json) { File.open("#{FIXTURES_PATH}/responses/with_cannonical_ids.json").read }
+
+    it '#has_canonical_ids?' do
+      expect(response.has_canonical_ids?).to be true
+    end
+    it '#count_canonical_ids' do
+      expect(response.count_canonical_ids).to eql(1)
+    end
+    it '#canonical_ids' do
+      expect(response.results_with_canonical_ids.size).to eql(1)
     end
   end
 end

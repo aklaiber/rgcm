@@ -22,16 +22,28 @@ module Rgcm
       self.count_failures > 0
     end
 
+    def count_canonical_ids
+      self.body[:canonical_ids]
+    end
+
+    def has_canonical_ids?
+      self.count_canonical_ids > 0
+    end
+
     def results
       self.body[:results]
     end
 
-    def errors
+    def results_with_errors
       self.results.select { |result| result.key?(:error) }
     end
 
-    def successes
+    def results_with_successes
       self.results.select { |result| !result.key?(:error) }
+    end
+
+    def results_with_canonical_ids
+      self.results.select { |result| result.key?(:registration_id) }
     end
 
   end
