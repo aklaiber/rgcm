@@ -30,13 +30,23 @@ Or install it yourself as:
 ## Usage
 
 ``` ruby
-collapse_key = '_GCM_COLLAPS_KEY_' 
-data = { foo: 'bar' }
+Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', { foo: 'bar' }) # => Rgcm::Response
 
-Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', collapse_key, data) # => Rgcm::Response
-
-Rgcm::Message.new('_API_KEY_').post(['_GCM_REGESTRATION_ID_1_', '_GCM_REGESTRATION_ID_2_'], collapse_key, data) # => Rgcm::Response
+Rgcm::Message.new('_API_KEY_').post(['_GCM_REGESTRATION_ID_1_', '_GCM_REGESTRATION_ID_2_'], { foo: 'bar' }) # => Rgcm::Response
 ```
+
+With collapse_key:
+
+``` ruby
+Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', { foo: 'bar' }, {collapse_key: 'collapse_key'}) # => Rgcm::Response
+```
+
+With time_to_live:
+
+``` ruby
+Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', { foo: 'bar' }, {time_to_live: 3}) # => Rgcm::Response
+```
+
 
 With rails YML config file:
 
@@ -52,12 +62,9 @@ production:
 ```
 
 ``` ruby
-collapse_key = '_GCM_COLLAPS_KEY_' 
-data = { foo: 'bar' }
+Rgcm::Message.new.post('_GCM_REGESTRATION_ID_', { foo: 'bar' }) # => Rgcm::Response
 
-Rgcm::Message.new.post('_GCM_REGESTRATION_ID_', collapse_key, data) # => Rgcm::Response
-
-Rgcm::Message.new.post(['_GCM_REGESTRATION_ID_1_', '_GCM_REGESTRATION_ID_2_'], collapse_key, data) # => Rgcm::Response
+Rgcm::Message.new.post(['_GCM_REGESTRATION_ID_1_', '_GCM_REGESTRATION_ID_2_'], { foo: 'bar' }) # => Rgcm::Response
 ```
 
 Rgcm::Response methods:
@@ -75,7 +82,7 @@ Rgcm::Response methods:
 ```
 
 ``` ruby
-response = Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', collapse_key, data)
+response = Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', { foo: 'bar' })
 
 response.count_successes # => 1
 response.count_failures # => 0
