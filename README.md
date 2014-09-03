@@ -62,9 +62,9 @@ production:
 ```
 
 ``` ruby
-Rgcm::Message.new.post('_GCM_REGESTRATION_ID_', data) # => Rgcm::Response
+Rgcm::Message.new.post('_GCM_REGESTRATION_ID_', { foo: 'bar' }) # => Rgcm::Response
 
-Rgcm::Message.new.post(['_GCM_REGESTRATION_ID_1_', '_GCM_REGESTRATION_ID_2_'], data) # => Rgcm::Response
+Rgcm::Message.new.post(['_GCM_REGESTRATION_ID_1_', '_GCM_REGESTRATION_ID_2_'], { foo: 'bar' }) # => Rgcm::Response
 ```
 
 Rgcm::Response methods:
@@ -82,7 +82,7 @@ Rgcm::Response methods:
 ```
 
 ``` ruby
-response = Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', data)
+response = Rgcm::Message.new('_API_KEY_').post('_GCM_REGESTRATION_ID_', { foo: 'bar' })
 
 response.count_successes # => 1
 response.count_failures # => 0
